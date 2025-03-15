@@ -1,0 +1,402 @@
+body {
+    font-family:Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e5;
+    color: #333;
+}
+body {
+    font-size: 16px;
+}
+
+/* Màn hình máy tính bảng (768px trở lên) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
+}
+
+/* Màn hình điện thoại (600px trở lên) */
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    footer .footer-info {
+        text-align: center;
+    }
+
+    .order-button {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 14px;
+    }
+ @media (max-width: 768px) {
+        nav ul li a {
+            font-size: 16px;
+            padding: 10px 14px;
+        }
+    }
+    
+@media (max-width: 480px) {
+        nav ul li a {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+    }   
+}
+header {
+    background-color: #8b4513;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header {
+    position: relative; /* Để sử dụng position tuyệt đối cho logo */
+}
+
+.logo {
+    position: absolute; /* Để logo được căn chỉnh theo vị trí tuyệt đối */
+    top: 10px; /* Cách cạnh trên 10px */
+    left:40px; /* Cách cạnh trái 10px */
+}
+
+.logo img {
+    height: 60px; /* Kích thước của logo */
+    width: auto; /* Giữ tỉ lệ của logo */
+    transition: transform 0.3s ease; /* Mượt mà khi thay đổi */
+}
+.logo img:hover {
+    animation: shakeLogo 0.5s ease-in-out; /* Áp dụng hiệu ứng lắc lư */
+}
+@keyframes shakeLogo {
+    0% {
+        transform: translateX(0); /* Ban đầu, không dịch chuyển */
+    }
+    25% {
+        transform: translateX(-10px); /* Di chuyển sang trái */
+    }
+    50% {
+        transform: translateX(10px); /* Di chuyển sang phải */
+    }
+    75% {
+        transform: translateX(-10px); /* Di chuyển sang trái */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+/* Đảm bảo logo không bị che khuất bởi các phần khác */
+nav {
+    padding-left: 80px; /* Đảm bảo menu không bị che bởi logo */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #a0522d;
+}
+
+.nav-order-button {
+    background-color: #FF5733; /* Màu nổi bật */
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 25px; /* Bo tròn */
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.nav-order-button:hover {
+    background-color: #FF4500;
+}
+
+
+.order-button {
+    background-color: #ffcc00;
+    color: #8b4513 !important;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.order-button:hover {
+    background-color: #ff9900;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color:#FFD700;
+}
+
+h2 {
+    color: #8b4513;
+}
+.menu-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 90%;
+    max-width: 250px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #a0522d;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử trong footer */
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+    align-items: center; /* Căn giữa nội dung theo chiều ngang */
+   
+}
+
+footer .footer-info {
+    text-align: left; /* Căn trái các thông tin trong footer */
+    width: 100%; /* Chiếm 100% chiều rộng */
+    margin-top: 20px; /* Tạo khoảng cách giữa copyright và thông tin */
+    align-items: flex-start
+}
+
+footer .footer-info p {
+    margin: 5px 0; /* Tạo khoảng cách giữa các dòng thông tin */
+    font-size: 14px; /* Kích thước chữ cho thông tin footer */
+}
+
+footer .footer-info strong {
+    font-weight: bold; /* Làm đậm phần tiêu đề thông tin */
+}
+footer p {
+    text-align: center; /* Căn giữa phần copyright */
+    font-size: 10px; /* Thay đổi kích thước chữ của copyright */
+    margin-top: 50px; /* Tạo khoảng cách phía trên copyright */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/* Tùy chỉnh liên kết trong phần menu */
+.menu-link {
+    display: inline-block; /* Biến link thành phần tử inline-block để có thể điều chỉnh kích thước và padding */
+    padding: 20px 35px; /* Thêm khoảng cách trong hình chữ nhật */
+    background-color: #FF5733; /* Màu nền cho hình chữ nhật (bạn có thể thay đổi màu này) */
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    border-radius: 45px; /* Bo tròn các góc của hình chữ nhật */
+    font-size: 20px; /* Tăng kích thước chữ nếu cần */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng khi di chuột */
+    
+}
+
+.menu-link:hover {
+    transform: translateY(-5px); /* Đẩy link lên một chút khi di chuột */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ khi di chuột */
+    text-decoration: none; /* Thêm gạch dưới khi hover */
+}
+/* Cải thiện kiểu chữ và hiển thị cho banner */
+.banner {
+    background-image: url('banner-image.jpeg'); /* Thay 'banner-image.jpg' bằng hình ảnh banner bạn muốn */
+    background-size: cover; /* Làm cho hình ảnh phủ toàn bộ phần của banner */
+    background-position: center; /* Căn giữa hình ảnh */
+    text-align: center; /* Canh giữa chữ */
+    padding: 100px 0; /* Thêm khoảng cách từ trên xuống và dưới */
+    color: white; /* Đặt màu chữ là trắng */
+}
+
+.banner h1 {
+    font-family: 'Arial', sans-serif; /* Thay đổi font chữ nếu cần */
+    font-size: 50px; /* Tăng kích thước chữ */
+    font-weight: bold; /* Làm đậm chữ */
+    margin: 0; /* Loại bỏ margin */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Thêm bóng đổ với màu tối */
+}
+
+.highlight {
+    color: #f2eef2; /* Thay đổi màu chữ của TN Bakery (có thể dùng bất kỳ mã màu nào bạn thích) */
+    font-style: italic; /* Làm cho chữ in nghiêng */
+    font-family: 'Georgia', serif;
+   }
+
+.banner-text {
+    font-family: 'Georgia', serif; /* Đặt font chữ đẹp hơn cho đoạn văn */
+    font-size: 60px; /* Kích thước chữ lớn hơn */
+    margin-top: 20px; /* Khoảng cách từ tiêu đề xuống */
+    font-style: italic; /* Thêm phong cách chữ nghiêng */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Thêm hiệu ứng bóng đổ cho chữ */
+}
+.order-button {
+    position: fixed; /* Đặt vị trí cố định */
+    bottom: 20px; /* Đặt cách từ dưới lên 20px */
+    right: 20px; /* Đặt cách từ phải vào 20px */
+    padding: 15px 30px; /* Thêm khoảng cách trong nút */
+    background-color: #FF5733; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    font-size: 18px; /* Kích thước chữ */
+    font-weight: bold; /* Làm đậm chữ */
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    border-radius: 45px; /* Bo tròn góc của nút */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng */
+}
+
+.order-button:hover {
+    transform: translateY(-5px); /* Đẩy nút lên khi di chuột vào */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Thêm bóng đổ khi hover */
+}
+#about {
+    background-color: #fffaf0; /* Màu nền nhẹ nhàng */
+    padding: 20px 20px; /* Thêm khoảng cách để trông rộng rãi hơn */
+    text-align: center; /* Căn giữa nội dung */
+    border-radius: 15px; /* Bo góc cho phần section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+    max-width: 900px; /* Giới hạn chiều rộng */
+    margin: 40px auto; /* Căn giữa trên trang */
+}
+
+#about h1 {
+    color: #ae510e; /* Màu chữ nâu ấm áp */
+    font-size: 36px; /* Tăng kích thước tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ */
+    font-style: italic; /* Chữ nghiêng */
+}
+#about p {
+    font-size: 20px; /* Dễ đọc hơn */
+    line-height: 1.8; /* Tăng khoảng cách giữa các dòng */
+    color: #555; /* Màu chữ nhẹ hơn để không quá chói */
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+#menu h1 {
+    color: #ae510e; /* Màu chữ nâu ấm áp */
+    font-size: 30px; /* Tăng kích thước tiêu đề */
+}
+#contact h1 {
+    color: #ae510e; /* Màu chữ nâu ấm áp */
+    font-size: 25px; /* Tăng kích thước tiêu đề */
+}
+#order h1 {
+    color: #ae510e; /* Màu chữ nâu ấm áp */
+    font-size: 25px; /* Tăng kích thước tiêu đề */
+}
+.about-images {
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh */
+    gap: 20px; /* Tạo khoảng cách giữa các ảnh */
+}
